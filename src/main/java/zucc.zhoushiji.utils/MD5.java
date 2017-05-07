@@ -12,7 +12,7 @@ public class MD5 {
         try {
             MessageDigest messageDigest = MessageDigest.getInstance("MD5");
             messageDigest.update(message.getBytes());
-            md5Str = new BigInteger(1,messageDigest.digest()).toString(16);
+            md5Str = new BigInteger(1,messageDigest.digest()).toString(32);
         }catch (Exception e){
             e.printStackTrace();
         }
